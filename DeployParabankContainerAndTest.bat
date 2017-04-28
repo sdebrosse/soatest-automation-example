@@ -12,7 +12,7 @@ sleep 10
 :: In this section, we execute SOAtest. The first line creates the workspace called “temp_workspace” and then imports the Parabank project into this workspace. This is a required first step before executing the tests inside the Parabank project.
 :: The second line executes all .tst files inside the Parabank project.
 
-soatestcli.exe -data %TEMP_WORKSPACE_PATH% -import C:\Users\sdebrosse\parasoft\soavirt_workspace\Parabank
+soatestcli.exe -data %TEMP_WORKSPACE_PATH% -import Parabank
 soatestcli.exe -data %TEMP_WORKSPACE_PATH% -resource /Parabank -config "builtin://Demo Configuration" -localsettings %LOCALSETTINGS_PATH%
 
 :: Clean up section. Shuts down all running container instances of the “parasoft/parabank” image. The second line deletes the temp_workspace
