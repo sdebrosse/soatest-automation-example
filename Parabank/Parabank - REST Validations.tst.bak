@@ -15,13 +15,13 @@
     <active>true</active>
     <variablesSize>2</variablesSize>
     <EnvironmentVariable className="webtool.environment.EnvironmentVariable" version="3">
-     <maskValue>AgAAACAuyfTQYEkKyhKNXgmUhiOkrw456IeUaCC4vBtOT6pe+g==</maskValue>
-     <value>AgAAAFDDwcX+ZqBnKWVLLDbZQKyd3a9Htu+C+DIm2l07B+cW9BV0xkX8/+ilckm9Zr8mJe2oRwwzvwIbaVBrIVbfpkk3P5y5YcOqWGidg6phh97Gsw==</value>
+     <maskValue>AgAAACC2Uwr9YbFdinUg5HRFNZKJvZuojEp77zdNDJFglDT1OA==</maskValue>
+     <value>AgAAAFARpia2bsiDDdVpsZSPO4hVNU4QffuxGTKQ2YbJhUzsZN9vdffxwbTeNVOVxgdM+Wp7I+MTBZAYy/Y7uvZBrqXPgHqw0GKQfyoXxjcbdzGIuw==</value>
      <name>SWAGGER</name>
     </EnvironmentVariable>
     <EnvironmentVariable className="webtool.environment.EnvironmentVariable" version="3">
-     <maskValue>AgAAACAA0o/44E0HNghPrVuti8v8u9yOlLopx1o5Gl3nKoASKg==</maskValue>
-     <value>AgAAAECGJqW7A87rANT3tfkV9Fcd7RCq+ZOKRyL47v2xvk29xbEIxhuJk8jhmqFPBrCQrrV/f+o5wxQ8oMwmn05Mripn</value>
+     <maskValue>AgAAACDeMbcnEYaSIdxUz1gltefXBZJNpDUaYKyt5AuKn0GCwA==</maskValue>
+     <value>AgAAAEBZGPG8B/a2w4zbr+V8jXyYN20Crnc4ukEP2B8GUxAWSlq7A01QIyfVZ7AjeYO2BXoeUfxzBD3h72T87fwpckmS</value>
      <name>BASEURL</name>
     </EnvironmentVariable>
    </Environment>
@@ -204,7 +204,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
   <maxProfileMappingID>28</maxProfileMappingID>
   <PropertyOwnerImpl className="com.parasoft.property.PropertyOwnerImpl" version="1.1">
   </PropertyOwnerImpl>
-  <nextIdentifier>81</nextIdentifier>
+  <nextIdentifier>82</nextIdentifier>
   <testsSize>1</testsSize>
   <TestSuite className="webtool.test.TestSuite" version="44.15.2">
    <DebugAssets className="webtool.test.debug.DebugAssets" version="1">
@@ -224,7 +224,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
    </TestLogic>
    <testID>1</testID>
    <enabled>true</enabled>
-   <name>REST Validation</name>
+   <name>REST Validations</name>
    <TestSuitePerformanceOptions className="webtool.test.performance.TestSuitePerformanceOptions" version="1.5">
     <APMPerformanceProfileProviderContainer className="webtool.test.performance.apm.APMPerformanceProfileProviderContainer" version="1.1">
     </APMPerformanceProfileProviderContainer>
@@ -5046,7 +5046,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
     </TestLogic>
     <testID>75</testID>
     <enabled>true</enabled>
-    <name>Test Suite</name>
+    <name>Request a Loan</name>
     <TestSuitePerformanceOptions className="webtool.test.performance.TestSuitePerformanceOptions" version="1.5">
      <APMPerformanceProfileProviderContainer className="webtool.test.performance.apm.APMPerformanceProfileProviderContainer" version="1.1">
      </APMPerformanceProfileProviderContainer>
@@ -5788,7 +5788,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
         </UserMethod>
        </ScriptedValue>
        <WadlTestValue className="webtool.messaging.wadl.WadlTestValue" version="1.1">
-        <value>http://20bbbeca6020:8080/parabank/services/bank</value>
+        <value>http://8978d9204624:8080/parabank/services/bank</value>
        </WadlTestValue>
       </MultiValue>
      </RESTClient>
@@ -6407,7 +6407,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
         </UserMethod>
        </ScriptedValue>
        <WadlTestValue className="webtool.messaging.wadl.WadlTestValue" version="1.1">
-        <value>http://20bbbeca6020:8080/parabank/services/bank</value>
+        <value>http://8978d9204624:8080/parabank/services/bank</value>
        </WadlTestValue>
       </MultiValue>
      </RESTClient>
@@ -6888,7 +6888,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
         <name>Traffic Object</name>
        </ObjectOutputProvider>
       </MessagingOutputProvider>
-      <outputToolsSize>1</outputToolsSize>
+      <outputToolsSize>2</outputToolsSize>
       <XMLtoDataSource className="webtool.xml.XMLtoDataSource" version="v.2.8.14.14">
        <dataSourceNames size="1">
         <dataSourceName index="0">AccountIDs</dataSourceName>
@@ -6910,6 +6910,32 @@ Timestamp: 2017-04-26 23:55:11</notes>
         </WritableColumn>
        </VirtualDataSourceCreatorImpl>
       </XMLtoDataSource>
+      <XMLAssertionTool className="webtool.xml.assertion.XMLAssertionTool" version="v.2.2.1.14">
+       <dataSourceNames size="1">
+        <dataSourceName index="0">AccountIDs</dataSourceName>
+       </dataSourceNames>
+       <iconName>XMLAssertor</iconName>
+       <name>XML Assertor</name>
+       <assertionsSize>1</assertionsSize>
+       <StringComparisonAssertion className="webtool.assertion.xml.StringComparisonAssertion" version="3.6.2">
+        <timestamp>1493364077522</timestamp>
+        <name>String Comparison Assertion</name>
+        <Assertion_XPath>/*:loanResponse/approved</Assertion_XPath>
+        <NameValuePair className="webtool.data.NameValuePair" version="3.3">
+         <name>String Comparison Assertion</name>
+         <MultiValue className="webtool.data.MultiValue" version="1.4">
+          <StringTestValue className="webtool.data.StringTestValue" version="4.1">
+           <value>true</value>
+          </StringTestValue>
+          <ParameterizedTestValue className="webtool.data.ParameterizedTestValue" version="3.1">
+          </ParameterizedTestValue>
+         </MultiValue>
+        </NameValuePair>
+       </StringComparisonAssertion>
+       <ExpectedXMLMessage className="webtool.xml.ExpectedXMLMessage" version="1.2.1">
+        <message>true</message>
+       </ExpectedXMLMessage>
+      </XMLAssertionTool>
       <UserMethod className="com.parasoft.scripting.UserMethod" version="2.2">
        <code>true</code>
        <ScriptCode className="com.parasoft.scripting.jsr223.ScriptCode" version="2.1.1.1">
@@ -7084,7 +7110,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
         </UserMethod>
        </ScriptedValue>
        <WadlTestValue className="webtool.messaging.wadl.WadlTestValue" version="1.1">
-        <value>http://20bbbeca6020:8080/parabank/services/bank</value>
+        <value>http://8978d9204624:8080/parabank/services/bank</value>
        </WadlTestValue>
       </MultiValue>
      </RESTClient>
@@ -7743,7 +7769,7 @@ Timestamp: 2017-04-26 23:55:11</notes>
         </UserMethod>
        </ScriptedValue>
        <WadlTestValue className="webtool.messaging.wadl.WadlTestValue" version="1.1">
-        <value>http://20bbbeca6020:8080/parabank/services/bank</value>
+        <value>http://8978d9204624:8080/parabank/services/bank</value>
        </WadlTestValue>
       </MultiValue>
      </RESTClient>
